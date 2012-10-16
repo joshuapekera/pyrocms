@@ -65,7 +65,7 @@
 
 				});
 			</script>
-			<input id="searchform" name="searchform" type="text" placeholder="Type something and hit enter..." />
+			<input id="searchform" name="searchform" type="text" placeholder="Search" />
 		</div>
 	</div>
 </div>
