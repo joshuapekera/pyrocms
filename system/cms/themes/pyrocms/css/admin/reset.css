@@ -37,6 +37,7 @@ q:before, q:after {
 :focus, :active {
 	outline: 0;
 }
+}
 
 /* remember to highlight inserts somehow! */
 ins {

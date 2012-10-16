@@ -118,6 +118,7 @@ textarea:focus
 	background: #ffffff;
 	border: 1px solid #ff5c00;
 	box-shadow: 0 0 5px #ff5c00;
+	outline: none;
 }
 textarea 
 {

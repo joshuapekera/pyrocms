@@ -1,6 +1,6 @@
 <ul class="primary-nav">
 	
-	<li id="home"><?php echo anchor('admin', Asset::img('home.png', 'Home'), (!$this->module > '' ? 'class="current' : '').'"');?></li>
+	<li id="home"><?php echo anchor('admin', Asset::img('dashboard.png', 'Home'), (!$this->module > '' ? 'class="current' : '').'"');?></li>
 	
 		<?php
 		foreach ($menu_items as $menu_item)
