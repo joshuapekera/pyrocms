@@ -79,6 +79,12 @@ jQuery(function($) {
 
 		// Add class to dropdowns for styling
 		$("nav#primary ul li:has(ul)").children("a").addClass("menu");
+		
+		// Add class to next anchor for styling
+		$("nav#primary ul li a").hover(function() {
+			$(this).parent().next().find("a").addClass("next");
+			$(this).parent().prev().find("a").addClass("prev");
+		});
 
 		// Add the close link to all alert boxes
 		$('.alert').livequery(function(){
