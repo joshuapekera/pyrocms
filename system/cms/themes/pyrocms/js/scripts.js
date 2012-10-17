@@ -84,6 +84,17 @@ jQuery(function($) {
 		$("nav#primary ul li a").hover(function() {
 			$(this).parent().next().find("a").addClass("next");
 			$(this).parent().prev().find("a").addClass("prev");
+		},function(){
+			$(this).parent().next().find("a").removeClass("next");
+			$(this).parent().prev().find("a").removeClass("prev");
+		});
+			
+		$("nav#primary ul li a").livequery(function(){
+			$(".current").parent().next().find("a").addClass("next-current");
+			$(".current").parent().prev().find("a").addClass("prev-current");
+			},function(){
+			$(".current").parent().next().find("a").removeClass("next-current");
+			$(".current").parent().prev().find("a").removeClass("prev-current");
 		});
 
 		// Add the close link to all alert boxes

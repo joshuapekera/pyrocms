@@ -219,6 +219,8 @@ nav#primary ul li#home
 nav#primary ul li#home a
 {
 	padding-top: 20px;
+	border-left: 1px solid #333;
+	box-shadow: inset 1px 0 0 0 #222
 }
 
 nav#primary li#home a img
@@ -241,25 +243,44 @@ nav#primary ul li:last-child a.top-link
 nav#primary ul li a.top-link:hover
 {
 	color: #ff9900;
-	/* border-top: 1px solid #000000; */
 	border-left: 1px solid #222;
 	border-right: 1px solid #222;
 	box-shadow: inset 0 4px 8px 0px #000000;
 }
 
-nav#primary ul li:first-child a.top-link:hover, nav#primary ul li:last-child a.top-link:hover
+nav#primary ul li#home a:hover
 {
 	border-left: 1px solid #333;
+	border-right: 1px solid #222;
+	box-shadow: inset 0 4px 8px 0px #000000;
+}
+
+nav#primary ul li:first-child a.top-link:hover
+{
+	border-left: 1px solid #333;
+	border-right: 1px solid #222;
+}
+
+nav#primary ul li:last-child a.top-link:hover
+{
+	border-left: 1px solid #222;
 	border-right: 1px solid #333;
 }
 
-nav#primary ul li a.current
+nav#primary ul li a.top-link.current
 {
-	/* border-top: 1px solid #ff9a00; */
+	box-shadow: inset 0 4px 8px #000000;
+	color: #ccc;
+	border-left: 1px solid #222;
+	border-right: 1px solid #222;
+}
+
+nav#primary ul li#home a.current
+{
 	box-shadow: inset 0 4px 8px #000000;
 	color: #ccc;
 	border-left: 1px solid #333;
-	border-right: 1px solid #333;
+	border-right: 1px solid #222;
 }
 
 nav#primary ul li a.current:hover
@@ -267,16 +288,15 @@ nav#primary ul li a.current:hover
 	color: #ff9900;
 }
 
-nav#primary ul li a.current + a.top-link ~ li
+nav#primary ul li a.top-link.next, nav#primary ul li a.top-link.next-current
 {
-	border-left: 1px solid blue;
+	border-left: 1px solid #333;
 }
 
-nav#primary ul li a.top-link:hover + li a
+nav#primary ul li a.top-link.prev, nav#primary ul li a.top-link.prev-current
 {
-	border-left: 1px solid pink;
+	border-right: 1px solid #333;
 }
-
 
 nav#primary a.menu 
 {
@@ -323,12 +343,13 @@ nav#primary ul li ul
 { 
 	display: none; 
 	position: absolute; 
-	/* margin: 0 0 0 1px;  */
-	padding: 20px 0 0 0; 
+	padding: 4px 0 0 0;
+	margin-top: 16px; 
+	height: auto;
 	z-index: 999; 
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
 }
 	
 nav#primary ul li ul li
