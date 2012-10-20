@@ -37,12 +37,12 @@
 				if ($count > 1 )
 				{
 					echo '<li>';
-
+					
 					$name = lang('cp_nav_'.$menu_item)!=''&&lang('cp_nav_'.$menu_item)!=null ? lang('cp_nav_'.$menu_item) : $menu_item;
 					$current = (($this->module_details && $this->module_details['menu'] == $menu_item) or $menu_item == $this->module);
 					$class = $current ? "top-link current" : "top-link";
-					echo anchor(current_url() . '#', $name, array('class' => $class));
-
+					echo "<a href=javascript:void(0); class = $class >$name</a>";
+					
 					echo '<ul>';
 					
 				// User has access to Users module only, no other users item
@@ -100,11 +100,4 @@
 		<?php if (array_key_exists('modules', $this->permissions) or $this->current_user->group == 'admin'): ?>
 			<li><?php echo anchor('admin/addons', lang('cp_nav_addons'), 'class="top-link' . (($this->module == 'addons') ? ' current"' : '"'));?></li>
 		<?php endif; ?>
-				
-        <?php if($module_details['slug']): ?>
-            <li id="help-link">
-                <?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?>
-            </li>
-        <?php endif; ?>
-
 	</ul>
