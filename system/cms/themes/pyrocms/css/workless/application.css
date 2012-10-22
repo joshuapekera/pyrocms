@@ -144,7 +144,7 @@ nav#usernav
 nav#usernav ul li
 {
 	margin-right: 15px;
-	display: inline;
+	display: inline-block;
 	-webkit-transition: 250ms linear all; 
 	-moz-transition: 250ms linear all; 
 	transition: 250ms linear all;
