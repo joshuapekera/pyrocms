@@ -173,7 +173,9 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #222222;
+  background-image: url("../../img/bg_texture@1x.png");
+  background-repeat: repeat;
 }
 a {
   color: #ff9a00;
