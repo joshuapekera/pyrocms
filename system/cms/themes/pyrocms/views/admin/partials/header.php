@@ -3,7 +3,7 @@
 </noscript>
 
 <div class="primary_bar">
-	<div class="wrapper">
+	<div class="container">
 		<div id="welcome">
 			<?php echo gravatar($current_user->email, 25); ?> <?php echo anchor('edit-profile', sprintf(lang('cp_logged_in_welcome'), $current_user->display_name . ' <i class="icon-edit icon-white"></i>')); ?>
 		</div>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="secondary_bar" dir="<?php $lang = $this->load->get_var('lang'); echo $lang['direction']; ?>">
-	<div class="wrapper">
+	<div class="container">
 		<nav id="primary">
 			<?php file_partial('navigation'); ?>
 		</nav>
@@ -71,7 +71,7 @@
 </div>
 
 <div class="subbar">
-	<div class="wrapper">
+	<div class="container">
 		<h2><?php echo $module_details['name'] ? anchor('admin/'.$module_details['slug'], $module_details['name']) : lang('global:dashboard'); ?></h2>
 	
 		<small>

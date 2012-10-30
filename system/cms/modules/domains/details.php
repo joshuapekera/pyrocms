@@ -27,7 +27,7 @@ class Module_Domains extends Module
 		        array(
 		            'name'  => 'domains:add_domain',
 		            'uri'   => 'admin/domains/add',
-		            'class' => 'add'
+		            'class' => 'btn btn-primary add'
 		        ),
 		    ),
 		);

@@ -4,12 +4,12 @@
 	
 		// What type of buttons?
 		if(isset($button_type) && $button_type == 'primary'):
-			$btn_class = 'button';
+			$btn_class = 'btn btn-primary';
 		elseif(isset($button_type) && $button_type == 'secondary'):
-			$btn_class = 'button';
+			$btn_class = 'btn';
 		else:
 			// Default to primary
-			$btn_class = 'button';
+			$btn_class = 'btn';
 		endif;
 	
 	?>
@@ -33,7 +33,7 @@
 				</button>
 				<?php break;
 			case 're-index': ?>
-				<button type="submit" name="btnAction" value="re-index" class="button orange">
+				<button type="submit" name="btnAction" value="re-index" class="btn btn-warning">
 					<span><?php echo lang('buttons.re-index'); ?></span>
 				</button>
 				<?php break;
@@ -44,20 +44,20 @@
 			case 'save_exit':
 			case 'preview':
 			case 'upload': ?>
-				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="button green">
+				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="btn btn-success">
 					<span><?php echo lang('buttons.' . $button); ?></span>
 				</button>
 
 			<?php break;
 			case 'deactivate':
 			case 'unapprove': ?>
-				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="button red">
+				<button type="submit" name="btnAction" value="<?php echo $button ?>" class="btn btn-danger">
 					<span><?php echo lang('buttons.' . $button); ?></span>
 				</button>
 				<?php break;
 			case 'cancel':
 			case 'close':
-				if($btn_class == 'button') $btn_class .= ' red';
+				if($btn_class == 'btn') $btn_class .= ' btn-danger';
 				$uri = 'admin/' . $this->module_details['slug'];
 				$active_section = $this->load->get_var('active_section');
 
@@ -75,7 +75,7 @@
 			 */
 			case 'edit':
 				$id = is_array($extra) && array_key_exists('id', $extra) ? '/' . $button . '/' . $extra['id'] : null;
-				if($btn_class == 'button') $btn_class .= ' gray';
+				if($btn_class == 'btn') $btn_class .= ' gray';
 
 				echo anchor('admin/' . $this->module_details['slug'] . $id, lang('buttons.' . $button), 'class="'.$btn_class.' ' . $button . '"');
 				break; ?>

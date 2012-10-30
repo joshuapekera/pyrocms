@@ -18,7 +18,7 @@
 		// 		        and make sure it has an ID.
 		// ---------------------------------------------------------
 		
-		// Used to store default text input valyes
+		// Used to store default text input values
 		var default_input_terms = new Array();
 		
 		// hides default input text from a input box

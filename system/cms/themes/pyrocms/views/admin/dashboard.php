@@ -1,9 +1,10 @@
-<!-- left one_half -->
-<div class="one_half">
+<!-- row fluid -->
+<div class="row-fluid">
 
 	<!-- analytics -->
-	<div class="one_half">
 		<?php if ((isset($analytic_visits) or isset($analytic_views)) and $theme_options->pyrocms_analytics_graph == 'yes'): ?>
+		<!-- span6 -->
+		<div class="span6">
 			<script type="text/javascript">
 				jQuery(function($) {
 					var visits = <?php echo isset($analytic_visits) ? $analytic_visits : 0; ?>;
@@ -70,13 +71,13 @@
 			<div class="item" id="analyticsWrapper">
 				<div id="analytics"></div>
 			</div>
+		</div><!-- /span6 -->
 		<?php endif; ?>
-	</div>
 	<!-- /analytics -->
 
 	<!-- rss feed -->
 	<?php if ( isset($rss_items) and $theme_options->pyrocms_news_feed == 'yes') : ?>
-		<div class="one_half" id="feed">
+		<div class="span6" id="feed">
 			<section class="title">
 				<h4><i class="icon-list"></i> <?php echo lang('cp_news_feed_title'); ?></h4>
 			</section>
@@ -111,14 +112,14 @@
 	<!-- /rss feed -->
 
 </div>
-<!-- /left one_half -->
+<!-- /row fluid -->
 
-<!-- right one_half -->
-<div class="one_half last">
+<!-- row fluid -->
+<div class="row-fluid">
 
 	<!-- quick links -->
 	<?php if ($theme_options->pyrocms_quick_links == 'yes') : ?>
-		<div id="quick_links" class="one_half last">
+		<div id="quick_links" class="span6">
 			<section class="title <?php echo isset($rss_items); ?>">
 				<h4><i class="icon-share"></i> <?php echo lang('cp_admin_quick_links') ?></h4>
 			</section>
@@ -164,7 +165,7 @@
 
 	<!-- recent comments -->
 	<?php if (isset($recent_comments) and is_array($recent_comments) and $theme_options->pyrocms_recent_comments == 'yes') : ?>
-		<div id="existing-comments" class="one_half last">
+		<div id="existing-comments" class="span6">
 			<section class="title">
 				<h4><i class="icon-comment"></i> <?php echo lang('comments:recent_comments') ?></h4>
 			</section>
@@ -194,10 +195,10 @@
 	<!-- /recent comments -->
 
 </div>
-<!-- /right one_half -->
+<!-- /row fluid -->
 
 <!-- dashboard widgets -->
-<div class="one_full">
+<div class="row-fluid">
 	{{ widgets:area slug="dashboard" }}
 </div>
 <!-- /dashboard widgets -->
