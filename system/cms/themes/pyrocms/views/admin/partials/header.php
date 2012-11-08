@@ -5,7 +5,7 @@
 <div class="primary_bar">
 	<div class="container">
 		<div id="welcome">
-			<?php echo gravatar($current_user->email, 25); ?> <?php echo anchor('edit-profile', sprintf(lang('cp_logged_in_welcome'), $current_user->display_name . ' <i class="icon-edit icon-white"></i>')); ?>
+			<?php echo gravatar($current_user->email, 25); ?> <?php echo anchor('edit-profile', sprintf(lang('cp_logged_in_welcome'), $current_user->display_name . '<i></i>'), array('class' => 'halflings white edit align-right')); ?>
 		</div>
 
 		<nav id="usernav">

@@ -33,14 +33,14 @@
 					<?php $this->load->view('admin/partials/notices') ?>
 					
 					<div class="input-prepend">
-						<span class="add-on">$</span>
-						<input class="span4" id="prependedInput" type="text" name="email" placeholder="<?php echo lang('global:email'); ?>" />
+						<span class="add-on glyphicons envelope"><i></i></span>
+						<input class="span3" id="prependedInput" type="text" name="email" placeholder="<?php echo lang('global:email'); ?>" />
 						<!-- <?php echo Asset::img('admin/email-icon.png', lang('global:email'), array('class' => 'input-email'));?> -->
 					</div> <!-- /field -->
 				
 					<div class="input-prepend">
-						<span class="add-on">$</span>
-						<input class="span4" id="prependedInput" type="password" name="password" placeholder="<?php echo lang('global:password'); ?>" />
+						<span class="add-on glyphicons lock"><i></i></span>
+						<input class="span3" id="prependedInput" type="password" name="password" placeholder="<?php echo lang('global:password'); ?>" />
 						<!-- <?php echo Asset::img('admin/lock-icon.png', lang('global:password'), array('class' => 'input-password'));?> -->
 					</div> <!-- /password -->
 					

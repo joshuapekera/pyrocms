@@ -10399,6 +10399,12 @@ span.cke_skin_kama {
 .pull-left {
   float: left;
 }
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: right;
+}
 .hide {
   display: none;
 }
