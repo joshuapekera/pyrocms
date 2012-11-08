@@ -140,6 +140,11 @@ body {
 
 /* Glyphicons */
 
+a:hover {
+  color: #ff9a00;
+  text-decoration: none;
+}
+
 p,.glyphicons {
 	display:inline-block;
 	*display:inline;
