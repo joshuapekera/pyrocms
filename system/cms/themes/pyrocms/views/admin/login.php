@@ -5,9 +5,11 @@
 	<title><?php echo $this->settings->site_name; ?> - <?php echo lang('login_title');?></title>
 	
 	<base href="<?php echo base_url(); ?>" />
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="robots" content="noindex, nofollow" />
 
-	<?php Asset::css(array('workless/typography.css', 'workless/forms.css', 'workless/buttons.css', 'workless/alerts.css', 'workless/icons.css', 'workless/helpers.css')); ?>
+	<?php Asset::css(array('main/style.css', 'main/responsive.css', 'main/animate.css', 'jquery/colorbox.css', 'codemirror.css')); ?>
 	<?php Asset::css('admin/login.css'); ?>
 	<?php Asset::js('jquery/jquery.js'); ?>
 	<?php Asset::js('admin/login.js'); ?>
@@ -17,38 +19,39 @@
 
 <body id="login" class="noise">
 
-	<div class="account-container">
+	<div class="container">
+	<div class="account-container animated fadeIn" id="login-panel">
 		
 		<div class="content clearfix">
 			
-			<?php echo form_open('admin/login'); ?>
+			<div id="login-logo"></div>
 			
-				<div id="login-logo"></div>		
+			<?php echo form_open('admin/login', array('class' => 'form-horizontal')); ?>		
 						
-				<div class="login-fields">
+				<div class="control-group">
 					
 					<?php $this->load->view('admin/partials/notices') ?>
 					
-					<div class="field">
-						<input type="text" name="email" placeholder="<?php echo lang('global:email'); ?>" />
-						<?php echo Asset::img('admin/email-icon.png', lang('global:email'), array('class' => 'input-email'));?>
+					<div class="input-prepend">
+						<span class="add-on">$</span>
+						<input class="span4" id="prependedInput" type="text" name="email" placeholder="<?php echo lang('global:email'); ?>" />
+						<!-- <?php echo Asset::img('admin/email-icon.png', lang('global:email'), array('class' => 'input-email'));?> -->
 					</div> <!-- /field -->
-					
-					<div class="field">
-						<input type="password" name="password" placeholder="<?php echo lang('global:password'); ?>" />
-						<?php echo Asset::img('admin/lock-icon.png', lang('global:password'), array('class' => 'input-password'));?>
+				
+					<div class="input-prepend">
+						<span class="add-on">$</span>
+						<input class="span4" id="prependedInput" type="password" name="password" placeholder="<?php echo lang('global:password'); ?>" />
+						<!-- <?php echo Asset::img('admin/lock-icon.png', lang('global:password'), array('class' => 'input-password'));?> -->
 					</div> <!-- /password -->
 					
 				</div> <!-- /login-fields -->
 				
 				<div class="login-actions">
-					
-					<span class="login-checkbox">
+					<label for="remember" class="checkbox remember muted">
 						<input class="remember" class="remember" id="remember" type="checkbox" name="remember" value="1" />
-						<label for="remember" class="remember muted"><?php echo lang('user_remember'); ?></label>
-					</span>
-										
-					<button class="button green">Sign In</button>
+						<?php echo lang('user_remember'); ?>
+					</label>										
+					<button class="btn btn-primary">Sign In</button>
 					
 				</div> <!-- .actions -->
 				
@@ -57,6 +60,7 @@
 		</div> <!-- /content -->
 		
 	</div> <!-- /account-container -->
+	</div>
 		
 </body>
 </html>
