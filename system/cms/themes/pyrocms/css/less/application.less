@@ -83,6 +83,7 @@
 	font-size: 13px;
 	color: #777;
 	padding-right: 20px;
+	position: relative;
 }
 
 #welcome a:hover
@@ -90,6 +91,21 @@
 	color: white;
 }
 
+#welcome a:after {
+	content: "\e065";
+	font: 12px/1em 'Glyphicons Halflings';
+	font-style: normal;
+	color: @white;
+	.opacity(15);
+	position: absolute;
+	top: 1px;
+	right: 3px;
+	&:hover, &:focus {
+		.opacity(0);
+	}
+}
+
+/*
 #welcome i
 {
 	filter: alpha(opacity=15);
@@ -106,6 +122,7 @@
   	-moz-opacity: 1;
   	opacity: 1;
 }
+*/
 /* @end Welcome */
 
 

@@ -9476,23 +9476,45 @@ li.L9 {
   font-size: 13px;
   color: #777;
   padding-right: 20px;
+  position: relative;
 }
 #welcome a:hover {
   color: white;
 }
-#welcome i {
-  filter: alpha(opacity=15);
-  -khtml-opacity: 0.15;
-  -moz-opacity: 0.15;
+#welcome a:after {
+  content: "\e065";
+  font: 12px/1em 'Glyphicons Halflings';
+  font-style: normal;
+  color: #ffffff;
   opacity: 0.15;
-  margin-top: 1px;
+  filter: alpha(opacity=15);
+  position: absolute;
+  top: 1px;
+  right: 3px;
 }
-#welcome i:hover {
-  filter: alpha(opacity=100);
-  -khtml-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
+#welcome a:after:hover,
+#welcome a:after:focus {
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
+/*
+#welcome i
+{
+	filter: alpha(opacity=15);
+  	-khtml-opacity: 0.15;
+  	-moz-opacity: 0.15;
+  	opacity: 0.15;
+  	margin-top: 1px;
+}
+
+#welcome i:hover 
+{
+	filter: alpha(opacity=100);
+  	-khtml-opacity: 1;
+  	-moz-opacity: 1;
+  	opacity: 1;
+}
+*/
 /* @end Welcome */
 /**
  * User nav
@@ -10398,12 +10420,6 @@ span.cke_skin_kama {
 }
 .pull-left {
   float: left;
-}
-.align-right {
-  text-align: right;
-}
-.align-left {
-  text-align: right;
 }
 .hide {
   display: none;
