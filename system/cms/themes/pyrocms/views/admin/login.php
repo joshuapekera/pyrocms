@@ -5,62 +5,67 @@
 	<title><?php echo $this->settings->site_name; ?> - <?php echo lang('login_title');?></title>
 	
 	<base href="<?php echo base_url(); ?>" />
-	<!-- Mobile viewport optimized -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="robots" content="noindex, nofollow" />
-
-	<?php Asset::css(array('main/style.css', 'main/responsive.css', 'main/animate.css', 'jquery/colorbox.css', 'codemirror.css')); ?>
-	<?php Asset::css('admin/login.css'); ?>
+	
+	<?php Asset::css('admin/style.css'); ?>
 	<?php Asset::js('jquery/jquery.js'); ?>
 	<?php Asset::js('admin/login.js'); ?>
+	
 	<?php echo Asset::render() ?>
+	
+	<!-- Place CSS bug fixes for IE 7 in this comment -->
+	<!--[if IE 7]>
+	<style type="text/css" media="screen">
+		#login-logo { margin: 15px auto 15px auto; }
+		.input-email { margin: -24px 0 0 10px;}
+		.input-password { margin: -30px 0 0 14px; }
+		body#login #login-box input { height: 20px; padding: 10px 4px 4px 35px; }
+		body#login{ margin-top: 14%;}
+	</style>
+	<![endif]-->
 
 </head>
 
-<body id="login" class="noise">
+<body id="login">
 
-	<div class="container">
-	<div class="account-container animated fadeIn" id="login-panel">
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+	<div id="login-box">
 		
-		<div class="content clearfix">
-			
+		<?php $this->load->view('admin/partials/notices') ?>
+		
+		<header id="main">
 			<div id="login-logo"></div>
-			
-			<?php echo form_open('admin/login', array('class' => 'form-horizontal')); ?>		
-						
-				<div class="control-group">
-					
-					<?php $this->load->view('admin/partials/notices') ?>
-					
-					<div class="input-prepend">
-						<span class="add-on glyphicons envelope"><i></i></span>
-						<input class="span3" id="prependedInput" type="text" name="email" placeholder="<?php echo lang('global:email'); ?>" />
-						<!-- <?php echo Asset::img('admin/email-icon.png', lang('global:email'), array('class' => 'input-email'));?> -->
-					</div> <!-- /field -->
-				
-					<div class="input-prepend">
-						<span class="add-on glyphicons lock"><i></i></span>
-						<input class="span3" id="prependedInput" type="password" name="password" placeholder="<?php echo lang('global:password'); ?>" />
-						<!-- <?php echo Asset::img('admin/lock-icon.png', lang('global:password'), array('class' => 'input-password'));?> -->
-					</div> <!-- /password -->
-					
-				</div> <!-- /login-fields -->
-				
-				<div class="login-actions">
-					<label for="remember" class="checkbox remember muted">
-						<input class="remember" class="remember" id="remember" type="checkbox" name="remember" value="1" />
-						<?php echo lang('user_remember'); ?>
-					</label>										
-					<button class="btn btn-primary">Sign In</button>
-					
-				</div> <!-- .actions -->
-				
-			<?php echo form_close(); ?>
-			
-		</div> <!-- /content -->
+		</header>
 		
-	</div> <!-- /account-container -->
+		<?php echo form_open('admin/login'); ?>
+			<ul>
+				<li>
+					<input type="text" name="email" placeholder="<?php echo lang('email_label'); ?>" />
+					<?php echo Asset::img('admin/email-icon.png', lang('email_label'), array('class' => 'input-email'));?>
+				</li>
+				
+				<li>
+					<input type="password" name="password" placeholder="<?php echo lang('password_label'); ?>"  />
+					<?php echo Asset::img('admin/lock-icon.png', lang('password_label'), array('class' => 'input-password'));?>
+				</li>
+				
+				<li>
+					<input class="remember" class="remember" id="remember" type="checkbox" name="remember" value="1" />
+					<label for="remember" class="remember"><?php echo lang('user_remember'); ?></label>
+				</li>
+				
+				<li><center><input class="button" type="submit" name="submit" value="<?php echo lang('login_label'); ?>" /></center></li>
+			</ul>
+		<?php echo form_close(); ?>
 	</div>
-		
+	<center>
+		<ul id="login-footer">
+			<li><a href="http://pyrocms.com/">Powered by PyroCMS</a></li>
+		</ul>
+	</center>
 </body>
 </html>
