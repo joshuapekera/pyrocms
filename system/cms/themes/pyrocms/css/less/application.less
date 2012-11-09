@@ -61,7 +61,6 @@
 {
 	margin-top: 10px;
 	float: left;
-	text-shadow: 0 -1px 0 #000000;
 }
 
 #welcome img {
@@ -77,48 +76,30 @@
 }
 
 #welcome a {
-	font-size: 13px;
-	color: #777;
-	padding-right: 20px;
+	font-size: @baseFontSize - 1;
+	color: @grayish;
+	padding-right: 15px;
 	position: relative;
 }
 
 #welcome a:hover {
-	color: white;
+	color: @grayLight;
 }
 
 #welcome a:after {
 	content: "\e065";
 	font: 12px/1em 'Glyphicons Halflings';
 	font-style: normal;
-	color: @white;
-	.opacity(15);
+	color: darken(@gray, 10%);
 	position: absolute;
-	top: 1px;
-	right: 3px;
+	top: 2px;
+	right: 0px;
 }
 
 #welcome a:hover:after {
-	.opacity(35);
-}
-/*
-#welcome i
-{
-	filter: alpha(opacity=15);
-  	-khtml-opacity: 0.15;
-  	-moz-opacity: 0.15;
-  	opacity: 0.15;
-  	margin-top: 1px;
+	color: @gray;
 }
 
-#welcome i:hover 
-{
-	filter: alpha(opacity=100);
-  	-khtml-opacity: 1;
-  	-moz-opacity: 1;
-  	opacity: 1;
-}
-*/
 /* @end Welcome */
 
 
@@ -127,7 +108,7 @@
  * User nav
  */
 nav#usernav {
-	margin: 10px 10px 0 0;
+	margin: 10px 15px 0 0;
 	float: right;
 }
 
@@ -137,53 +118,60 @@ nav#usernav ul li {
 }
 
 nav#usernav ul li a {
-	color: #777;
+	color: @grayish;
 	font-size: @baseFontSize - 2;
 	font-family: 'Helvetica Neue', "Arial", sans-serif;
-	text-shadow: 0 -1px 0 #000000;
+	position: relative;
 }
 
 nav#usernav ul li a:hover, nav#usernav ul li.active a {
-	color: white;
+	color: @grayLight;
 }
 
-nav#usernav ul li a i {
-	margin-top: 0px;
-	margin-left: 3px;
-	.opacity(15);
+nav#usernav li#view-site a {
+	padding-right: 15px;
 }
 
-nav#usernav li#view-site a:after {
-	content: "\e065";
-	font: 12px/1em 'Glyphicons Halflings';
-	font-style: normal;
-	color: @white;
-	.opacity(15);
-	position: absolute;
-	top: 1px;
-	right: 3px;
-}
-
-nav#usernav li#log-out a:after {
-	content: "\e065";
-	font: 12px/1em 'Glyphicons Halflings';
-	font-style: normal;
-	color: @white;
-	.opacity(15);
-	position: absolute;
-	top: 1px;
-	right: 3px;
+nav#usernav li#log-out a {
+	padding-right: 15px;
 }
 
 nav#usernav li#need-help a {
-	content: "\e065";
+	padding-right: 15px;
+}
+
+nav#usernav li#view-site a:after {
+	content: "\e066";
 	font: 12px/1em 'Glyphicons Halflings';
 	font-style: normal;
-	color: @white;
-	.opacity(15);
+	color: darken(@gray, 10%);
 	position: absolute;
 	top: 1px;
-	right: 3px;
+	right: 0px;
+}
+
+nav#usernav li#log-out a:after {
+	content: "\e017";
+	font: 12px/1em 'Glyphicons Halflings';
+	font-style: normal;
+	color: darken(@gray, 10%);
+	position: absolute;
+	top: 1px;
+	right: 0px;
+}
+
+nav#usernav li#need-help a:after {
+	content: "\e085";
+	font: 12px/1em 'Glyphicons Halflings';
+	font-style: normal;
+	color: darken(@gray, 10%);
+	position: absolute;
+	top: 1px;
+	right: 0px;
+}
+
+nav#usernav li#view-site a:hover:after, nav#usernav li#log-out a:hover:after, nav#usernav li#need-help a:hover:after {
+	color: @gray;
 }
 /* @end User nav */
 

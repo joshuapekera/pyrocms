@@ -11,8 +11,8 @@
 		<nav id="usernav">
 			<ul>
 				<li id="view-site"><?php echo anchor('',lang('cp_view_frontend'), 'target="_blank"');?></li>
-				<li id="log-out"><?php echo anchor('admin/logout', lang('cp_logout_label') . '<i class="icon-off icon-white"></i>'); ?></li>
-				<li id="help"><?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label') . '<i class="icon-question-sign icon-white"></i>', array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
+				<li id="log-out"><?php echo anchor('admin/logout', lang('cp_logout_label')); ?></li>
+				<li id="need-help"><?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
 			</ul>
 		</nav>
 	</div>
