@@ -64,8 +64,7 @@
 	text-shadow: 0 -1px 0 #000000;
 }
 
-#welcome img
-{
+#welcome img {
 	border: 1px solid #000000;
 	width: 25px;
 	height: 25px;
@@ -75,19 +74,16 @@
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 6px;
-	
 }
 
-#welcome a
-{
+#welcome a {
 	font-size: 13px;
 	color: #777;
 	padding-right: 20px;
 	position: relative;
 }
 
-#welcome a:hover
-{
+#welcome a:hover {
 	color: white;
 }
 
@@ -100,11 +96,11 @@
 	position: absolute;
 	top: 1px;
 	right: 3px;
-	&:hover, &:focus {
-		.opacity(0);
-	}
 }
 
+#welcome a:hover:after {
+	.opacity(35);
+}
 /*
 #welcome i
 {
@@ -130,52 +126,64 @@
 /**
  * User nav
  */
-nav#usernav
-{
+nav#usernav {
 	margin: 10px 10px 0 0;
 	float: right;
 }
 
-nav#usernav ul li
-{
+nav#usernav ul li {
 	margin-right: 15px;
 	display: inline-block;
-	-webkit-transition: 250ms linear all; 
-	-moz-transition: 250ms linear all; 
-	transition: 250ms linear all;
 }
 
-nav#usernav ul li:hover {}
-
-nav#usernav ul li a
-{
+nav#usernav ul li a {
 	color: #777;
-	font-size: 12px;
+	font-size: @baseFontSize - 2;
 	font-family: 'Helvetica Neue', "Arial", sans-serif;
 	text-shadow: 0 -1px 0 #000000;
 }
 
-nav#usernav ul li a:hover, nav#usernav ul li.active a
-{
+nav#usernav ul li a:hover, nav#usernav ul li.active a {
 	color: white;
 }
 
-nav#usernav ul li a i
-{
+nav#usernav ul li a i {
 	margin-top: 0px;
 	margin-left: 3px;
-	filter: alpha(opacity=15);
-  	-khtml-opacity: 0.15;
-  	-moz-opacity: 0.15;
-  	opacity: 0.15;
+	.opacity(15);
 }
 
-nav#usernav ul li a i:hover
-{
-	filter: alpha(opacity=100);
-  	-khtml-opacity: 1;
-  	-moz-opacity: 1;
-  	opacity: 1;
+nav#usernav li#view-site a:after {
+	content: "\e065";
+	font: 12px/1em 'Glyphicons Halflings';
+	font-style: normal;
+	color: @white;
+	.opacity(15);
+	position: absolute;
+	top: 1px;
+	right: 3px;
+}
+
+nav#usernav li#log-out a:after {
+	content: "\e065";
+	font: 12px/1em 'Glyphicons Halflings';
+	font-style: normal;
+	color: @white;
+	.opacity(15);
+	position: absolute;
+	top: 1px;
+	right: 3px;
+}
+
+nav#usernav li#need-help a {
+	content: "\e065";
+	font: 12px/1em 'Glyphicons Halflings';
+	font-style: normal;
+	color: @white;
+	.opacity(15);
+	position: absolute;
+	top: 1px;
+	right: 3px;
 }
 /* @end User nav */
 

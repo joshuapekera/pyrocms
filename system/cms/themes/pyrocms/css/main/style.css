@@ -2204,7 +2204,7 @@ html .halflings {
   content: "\e111";
 }
 .halflings.magnet i:before {
-  content: "\e113";
+  content: "\e112";
 }
 .halflings.chevron-up i:before {
   content: "\e113";
@@ -9492,10 +9492,9 @@ li.L9 {
   top: 1px;
   right: 3px;
 }
-#welcome a:after:hover,
-#welcome a:after:focus {
-  opacity: 0;
-  filter: alpha(opacity=0);
+#welcome a:hover:after {
+  opacity: 0.35;
+  filter: alpha(opacity=35);
 }
 /*
 #welcome i
@@ -9526,9 +9525,6 @@ nav#usernav {
 nav#usernav ul li {
   margin-right: 15px;
   display: inline-block;
-  -webkit-transition: 250ms linear all;
-  -moz-transition: 250ms linear all;
-  transition: 250ms linear all;
 }
 nav#usernav ul li a {
   color: #777;
@@ -9543,16 +9539,41 @@ nav#usernav ul li.active a {
 nav#usernav ul li a i {
   margin-top: 0px;
   margin-left: 3px;
-  filter: alpha(opacity=15);
-  -khtml-opacity: 0.15;
-  -moz-opacity: 0.15;
   opacity: 0.15;
+  filter: alpha(opacity=15);
 }
-nav#usernav ul li a i:hover {
-  filter: alpha(opacity=100);
-  -khtml-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
+nav#usernav li#view-site a:after {
+  content: "\e065";
+  font: 12px/1em 'Glyphicons Halflings';
+  font-style: normal;
+  color: #ffffff;
+  opacity: 0.15;
+  filter: alpha(opacity=15);
+  position: absolute;
+  top: 1px;
+  right: 3px;
+}
+nav#usernav li#log-out a:after {
+  content: "\e065";
+  font: 12px/1em 'Glyphicons Halflings';
+  font-style: normal;
+  color: #ffffff;
+  opacity: 0.15;
+  filter: alpha(opacity=15);
+  position: absolute;
+  top: 1px;
+  right: 3px;
+}
+nav#usernav li#need-help a {
+  content: "\e065";
+  font: 12px/1em 'Glyphicons Halflings';
+  font-style: normal;
+  color: #ffffff;
+  opacity: 0.15;
+  filter: alpha(opacity=15);
+  position: absolute;
+  top: 1px;
+  right: 3px;
 }
 /* @end User nav */
 /**

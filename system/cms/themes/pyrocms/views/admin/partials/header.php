@@ -10,9 +10,9 @@
 
 		<nav id="usernav">
 			<ul>
-				<li><?php echo anchor('',lang('cp_view_frontend') . '<i class="icon-eye-open icon-white"></i>', 'target="_blank"');?></li>
-				<li><?php echo anchor('admin/logout', lang('cp_logout_label') . '<i class="icon-off icon-white"></i>'); ?></li>
-				<li><?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label') . '<i class="icon-question-sign icon-white"></i>', array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
+				<li id="view-site"><?php echo anchor('',lang('cp_view_frontend'), 'target="_blank"');?></li>
+				<li id="log-out"><?php echo anchor('admin/logout', lang('cp_logout_label') . '<i class="icon-off icon-white"></i>'); ?></li>
+				<li id="help"><?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label') . '<i class="icon-question-sign icon-white"></i>', array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?></li>
 			</ul>
 		</nav>
 	</div>
